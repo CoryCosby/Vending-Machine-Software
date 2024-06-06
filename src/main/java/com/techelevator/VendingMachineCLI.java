@@ -1,5 +1,7 @@
 package com.techelevator;
 
+import com.techelevator.model.Vendable;
+import com.techelevator.model.VendingMachine;
 import com.techelevator.view.VendingMenu;
 
 
@@ -26,15 +28,24 @@ public class VendingMachineCLI {
 
 	public void run() {
 		boolean running = true;
+		VendingMachine vendingMachine = new VendingMachine();
+
+		vendingMachine.setProductsList(vendingMachine.createMap());
+		System.out.println(vendingMachine.getProductsList().get("A1").getItemCost());
+
 		while (running) {
 			String choice = (String) menu.getChoiceFromOptions(MAIN_MENU_OPTIONS);
 
-			// A switch statement could also be used here.  Your choice.
+//			 A switch statement could also be used here.  Your choice.
 			if (choice.equals(MAIN_MENU_OPTION_DISPLAY_ITEMS)) {
-				// display vending machine items
+
+//				 display vending machine items
 			} else if (choice.equals(MAIN_MENU_OPTION_PURCHASE)) {
-				// do purchase
-			}
+				System.out.println("bye");
+//				 do purchase
+			}else if (choice.equals(MAIN_MENU_OPTION_EXIT)){
+				break;
+		}
 		}
 	}
 
