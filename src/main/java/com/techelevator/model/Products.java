@@ -20,8 +20,11 @@ public abstract class Products {
         return inventoryCount;
     }
     public void setInventoryCount(int inventoryCount){
-        this.inventoryCount= inventoryCount;
+        this.inventoryCount -= inventoryCount;
     }
+
+    public abstract void sound();
+
     public Products(String itemNumber, String itemName, double itemCost){
         this.itemNumber = itemNumber;
         this.itemName = itemName;
@@ -29,4 +32,5 @@ public abstract class Products {
         this.inventoryCount = 5;
 
     }
+
 }
