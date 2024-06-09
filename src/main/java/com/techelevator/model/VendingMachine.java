@@ -81,7 +81,8 @@ public class VendingMachine {
         }
 
 
-        System.out.println("Your balance is " + quarter + " quarters\n" + dime + " dimes\n" + nickel + " nickels\n");
+        System.out.println("Your change is $" +
+                "" + balancePlaceHolder + "\n" + quarter + " quarters\n" + dime + " dimes\n" + nickel + " nickels\n");
 
         File log = new File("log.txt");
 
